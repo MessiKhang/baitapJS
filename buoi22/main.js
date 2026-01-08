@@ -70,3 +70,24 @@ function celsiusToFahrenheit(celsius) {
 }
 
 console.log(celsiusToFahrenheit(25));
+
+// Test 6
+function calculateElectricityBill(kWh) {
+    let total = 0;
+
+    if (kWh <= 50) {
+        total = kWh * 1678;
+    } else if (kWh <= 100) {
+        total = 50 * 1678 + (kWh - 50) * 1734;
+    } else if (kWh <= 200) {
+        total = 50 * 1678 + 50 * 1734 + (kWh - 100) * 2014;
+    } else {
+        total = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kWh - 200) * 2536;
+    }
+
+    return total;
+}
+console.log(calculateElectricityBill(45));
+console.log(calculateElectricityBill(75));
+console.log(calculateElectricityBill(150));
+console.log(calculateElectricityBill(250));
