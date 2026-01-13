@@ -3,11 +3,11 @@ function isPrime(n) {
 
     for (let i = 2; i <= n ** 0.5; i++) {
         if (n % i === 0) {
-            console.log(n + " không phải số nguyên tố");
+            console.log(n + " not a prime number");
             return false;
         }
     }
-    console.log(n + " là số nguyên tố");
+    console.log(n + " is a prime number");
 
     return true;
 }
